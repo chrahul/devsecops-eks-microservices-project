@@ -1,0 +1,125 @@
+# ============================================================
+# DevSecOps EKS Project - .gitignore
+# ============================================================
+
+# ===== SECRETS & CREDENTIALS (CRITICAL!) =====
+# AWS
+.aws/
+*.pem
+*.ppk
+aws-credentials*
+credentials
+config
+
+# SSH Keys
+*.key
+id_rsa
+id_ed25519
+*.pub
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+*.env
+secrets.yaml
+secrets.yml
+secret.*
+
+# Kubernetes secrets (raw secrets)
+*-secret.yaml
+*-secrets.yaml
+
+# Terraform sensitive files
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+
+# ===== APPLICATION DEPENDENCIES =====
+# Node.js (React frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Java/Maven (Spring Boot backend)
+target/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/
+mvnw
+mvnw.cmd
+
+# Python (if any scripts)
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+
+# ===== BUILD ARTIFACTS =====
+build/
+dist/
+out/
+*.log
+
+# ===== IDE & EDITOR FILES =====
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ===== OS JUNK FILES =====
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# ===== DOCKER =====
+*.tar
+docker-compose.override.yml
+
+# ===== KUBERNETES =====
+kubeconfig
+*.kubeconfig
+
+# ===== JENKINS =====
+.jenkins/
+jenkins-data/
+
+# ===== TEMP & BACKUP FILES =====
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
